@@ -8,6 +8,7 @@ ls -l
 chown hacker not-the-flag
 cat not-the-flag
 ````
+we change the owenership of the file `not-the-flag` to the hacker user. 
 
 ## GROUPS AND FILES
 ### FLAG: pwn.college{UmOXTj3_L0wM3z6sMvBmbsGdtA7.dFzNyUDLycTN0czW}
@@ -17,6 +18,8 @@ ls -l
 chgrp hacker not-the-flag
 cat not-the-flag
 ````
+we change the group of owenership of the file `not-the-flag` to the hacker user. 
+
 
 ## FUN WITH GROUP NAMES 
 ### FLAG: pwn.college{Iws3wZ-y5WbvX1E07vfHGeP63sQ.dJzNyUDLycTN0czW}
@@ -27,6 +30,7 @@ ls -l
 chgrp grp22522 not-the-flag
 cat not-the-flag
 ````
+We use the `ls -l` command to get the list of the permissions of the files in the directory. Here, we can see that the file `not-the-flag` which contains the flag is in the group **grp22522**. Therefore we change the permissions based on that. Running the program, we get the flag.
 
 ## CHANGING PERMISSIONS
 ### FLAG: pwn.college{0Y7_hoUwW5KoDBSMxA2cqRESje9.dNzNyUDLycTN0czW}
@@ -36,6 +40,7 @@ ls -l
 chmod o+rw not-the-flag
 cat not-the-flag
 ````
+Here, we change the persmissions of the flag file such that it can be read by those users ouutside the group and the owner of the file.
 
 ## EXECUTABLE FILES 
 ### FLAG: pwn.college{AAh3hlKMTpzP559W1fOztBnOvC1.dJTM2QDLycTN0czW}
@@ -44,6 +49,7 @@ cat not-the-flag
 chmod ugo+w /challenge/run
 /challenge/run
 ````
+Here, we change the persmissions of the flag file such that it can be executed using the `chmod ugo+w /challenge/run` command.
 
 ## PERMISSION TWEAKING PRACTICE
 ### FLAG: pwn.college{QUgdd72b33IJvLSP2mZHu_vwIOu.dBTM2QDLycTN0czW}
@@ -85,3 +91,4 @@ chmod u+s /challenge/getroot
 /challenge/getroot
 cat /flag
 ````
+We add the suid bit to the `/challenge/getroot` program. Running the program allows us to get access to root tasks. Using these permissions, we can run the `cat /flag` command to get the flag.
