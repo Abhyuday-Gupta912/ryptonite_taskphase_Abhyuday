@@ -42,7 +42,7 @@ hacker@path~adding-commands:~$ /challenge/run
 Invoking 'win'....
 pwn.college{kC70CEhLXasaElPxwNWrkEHG0ij.dZzNyUDLycTN0czW}
 ````
-In this, we create a file named **win**. In win e write the command `cat /flag`. Now since we want the cat function to be available in path and also the win file we need needs to be in th path. we add the `~` or the `/home/hacker` directory to the path address.  \
+In this, we create a file named **win**. In which we write the command `cat /flag`. Now since we want the cat function to be available in path and also the win file we need needs to be in th path. we add the `~` or the `/home/hacker` directory to the path address.  \
 Now we can change the permissions to access the win file to allow all users to read write and execute it.  
 now if we run the `/challenge/run` command, we can find the win file and execute the command within to get the flag..
 
@@ -59,6 +59,6 @@ Trying to remove /flag...
 Found 'rm' command at /home/hacker/rm. Executing!
 pwn.college{QhqYNyNF3ViRnijR-hW3JzDtu6v.ddzNyUDLycTN0czW}
 ````
-In this, we create a file named **rm**. In win e write the command `cat /flag` so that our flag is read instead of being removed. Now since we want the command in th path. we add the `~` or the `/home/hacker` directory to the path address.  \
+In this, we create a file named **rm**. In which we write the command `cat /flag` so that our flag is read instead of being removed. Now since we want the command in th path. we add the `~` or the `/home/hacker` directory to the path address.  \
 Now we can change the permissions to access the win file to allow all users to execute it.  
 now if we run the `/challenge/run` command, we can find the win file and execute the command within to get the flag.
